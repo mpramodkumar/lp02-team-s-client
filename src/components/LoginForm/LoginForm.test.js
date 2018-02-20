@@ -29,10 +29,6 @@ describe('Component: LoginForm', () => {
     expect(wrapper.find('.LoginForm-submit').exists()).toBe(true);
   });
 
-  it('should render a remember me toggle', () => {
-    expect(wrapper.find('.LoginForm-switch').exists()).toBe(true);
-  });
-
   it('should trigger onChange when email text is entered', () => {
     const emailField = wrapper.find('.LoginForm-email');
 
@@ -49,15 +45,6 @@ describe('Component: LoginForm', () => {
 
     passwordField.simulate('change', passwordInput[1]);
     expect(spy).toHaveBeenCalledWith(passwordInput[0], passwordInput[1]);
-  });
-
-  it('should trigger onChange when remember me is toggled', () => {
-    const toggleSwitch = wrapper.find('.LoginForm-switch');
-
-    const toggleInput = ['storeUser', true];
-
-    toggleSwitch.simulate('change', toggleInput[1]);
-    expect(spy).toHaveBeenCalledWith(toggleInput[0], toggleInput[1]);
   });
 
   it('should trigger onSubmit when submit button is clicked', () => {

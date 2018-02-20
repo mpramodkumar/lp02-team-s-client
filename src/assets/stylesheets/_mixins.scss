@@ -1,0 +1,94 @@
+@mixin column-grid($start, $end) {
+  grid-column: $start/$end;
+}
+@mixin row-grid($start, $end) {
+  grid-row: $start/$end;
+}
+@mixin button-styles {
+  height: 64px;
+  margin: 0 auto;
+}
+@mixin input-styles {
+  border: .1rem solid #D8D8D8;
+  border-radius: 8px;
+  display: block;
+  height: 64px;
+  margin: 30px auto;
+  padding-left: 5%;
+  width: 95%;
+}
+@mixin remove-styles {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border-style: none;
+}
+@mixin logo-style ($width, $vertical) {
+  object-fit: contain;
+  padding-right: 2%;
+  vertical-align: $vertical;
+  width: $width;
+}
+@mixin box-shadow ($x, $y, $blur, $spread, $blur-color) {
+  box-shadow: $x $y $blur $spread $blur-color;
+  -webkit-box-shadow: $x $y $blur $spread $blur-color;
+  -moz-box-shadow: $x $y $blur $spread $blur-color;
+}
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+@mixin transition($name, $duration, $timing) {
+  transition: $name $duration $timing;
+  -webkit-transition: $name $duration $timing;
+  -moz-transition: $name $duration $timing;
+}
+
+// font mixins
+@mixin H1Alt {
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+@mixin Link-Highlight {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+}
+
+@mixin Link-InActive {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: bold;
+  color: $light-grey;
+}
+
+@mixin Paragraph-Alt {
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #9b9b9b;
+}
+
+@mixin menu-text {
+  font-family: Roboto;
+  font-size: 12px;
+  color: #000000;
+}
+
+@mixin H3---Card-Titles {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: #000000;
+  text-transform: uppercase;
+}

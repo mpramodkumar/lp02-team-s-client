@@ -1,0 +1,53 @@
+@import '../../assets/stylesheets/variables';
+
+.loadedContent {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.LoginForm {
+  min-width: 355px;
+  height: 350px;
+}
+
+.LoginPage .md-card {
+  margin: 0;
+}
+
+.LoginForm-title {
+  background-color: $banner;
+  color: $white;
+  font-weight: $light;
+  padding: 20px;
+}
+
+.LoginForm-form {
+  padding: 0 20px;
+
+  label {
+    font-size: 12px;
+  }
+
+  .LoginForm-submit {
+    background-color: $black;
+    color: $white;
+    margin-left: 5px;
+    width: 100px;
+    transform: translateY(62%);
+
+  }
+
+  .LoginForm-submit:disabled {
+    background-color: $disabled-button-grey;
+  }  
+
+  .LoginForm-switch {
+    width: 50%;
+    display: inline-block;
+    transform: translate(-5%, 80%);
+
+    span {
+      font-size: 13px;
+    }
+  }
+}

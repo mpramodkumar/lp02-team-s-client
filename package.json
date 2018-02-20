@@ -1,0 +1,76 @@
+{
+  "name": "lp02-team-s-client",
+  "version": "0.1.0",
+  "engine": {
+    "node": "8.7.x"
+  },
+  "private": true,
+  "dependencies": {
+    "@reedsa/react-scripts": "0.2.0",
+    "apollo-client": "^2.2.0",
+    "apollo-client-preset": "^1.0.6",
+    "apollo-link-error": "^1.0.3",
+    "classnames": "^2.2.5",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-16": "^1.0.0",
+    "eslint": "^4.7.2",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-react": "^7.4.0",
+    "graphql": "^0.12.3",
+    "graphql-tag": "^2.6.1",
+    "material-design-icons": "^3.0.1",
+    "moment": "^2.20.1",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.0.2",
+    "prop-types": "^15.5.8",
+    "react": "^16.0.0",
+    "react-addons-css-transition-group": "^15.5.2",
+    "react-addons-transition-group": "^15.5.2",
+    "react-apollo": "^2.0.4",
+    "react-dom": "^16.0.0",
+    "react-loader": "^2.4.2",
+    "react-md": "^1.0.13",
+    "react-redux": "^5.0.3",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "^5.0.0-alpha.6",
+    "react-scripts": "1.0.14",
+    "react-test-renderer": "^16.0.0",
+    "recompose": "^0.26.0",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "webfontloader": "^1.6.27"
+  },
+  "scripts": {
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm rebuild node-sass && yarn build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "test-coverage": "react-scripts test --env=jsdom --coverage",
+    "eject": "react-scripts eject",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "lint": "eslint src/**/*.js",
+    "lint:watch": "esw -w src/**/*.js",
+    "precommit": "lint-staged",
+    "start-js": "react-scripts start",
+    "test:once": "npm rebuild node-sass && yarn build-css && CI=true react-scripts test src/**/* --env=jsdom",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "heroku-postbuild": "npm run build"
+  },
+  "devDependencies": {
+    "eslint-watch": "^3.1.0",
+    "husky": "^0.14.3",
+    "jest-localstorage-mock": "^2.2.0",
+    "lint-staged": "^4.2.3",
+    "prettier": "^1.2.2",
+    "react-addons-test-utils": "^15.6.0",
+    "react-moment": "^0.7.0",
+    "redux-mock-store": "^1.4.0"
+  },
+  "lint-staged": {
+    "{src,__{test|mocks}__}/**/*.js": [
+      "prettier --single-quote --trailing-comma es5 --write",
+      "git add"
+    ]
+  }
+}

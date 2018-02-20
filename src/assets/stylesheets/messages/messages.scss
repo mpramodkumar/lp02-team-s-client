@@ -1,0 +1,33 @@
+@import '../variables';
+@import '../mixins';
+
+.messages {
+  animation: slide-down 0.5s ease;
+  font-family: $light;
+  position: fixed;
+  top: $navbar-height;
+  transition: top 500ms ease;
+  width: 100%;
+  z-index: 2;
+  height: $navbar-height;
+
+  &.error {
+    background-color: $err-red;
+  }
+
+  &.success {
+    background-color: $green;
+  }
+
+  &.remove {
+    animation: slide-up 0.5s ease;
+    top: 0;
+  }
+}
+
+.messages__text {
+  color: $almost-white;
+  line-height: 24px;
+  padding: 5px 0;
+  text-align: center;
+}

@@ -1,0 +1,44 @@
+// Import standard theme color definitions
+@import '../../../node_modules/react-md/src/scss/colors';
+
+$white: #fff;
+$green: $md-green-500;
+$red: $md-red-500;
+$lightgrey:#b6b6b6;
+$grey:grey;
+
+//Colors
+$almost-white: #fafbfb;
+$err-red: #f18989;
+$active: #f26220;
+$boxshadow: #868686;
+$bg-light-blue: #e6f6ff;
+
+// App
+$banner: #292c44;
+$sub-banner: #244f67;
+$callout-box:#f3f3f3;
+$header-offwhite: #f9f9f9;
+$table-light: #ffffff;
+$table-dark: #e6f6ff;;
+$menu-drawer: #9b9b9b;
+$button: #000;
+$disabled-button-grey: #9b9b9b;
+$border: #d8d8d8;
+
+// Font colors
+$white: #f9f9f9;
+$black: #000;
+$placeholder: #9b9b9b;
+$inactiveTab: rgba(0, 0, 0, 0.4);
+
+// Fonts
+$main-font: "Roboto", sans-serif;
+$light: 300;
+$regular: 400;
+$bold: 700;
+$heavy: 500;
+$bold: 700;
+
+// Layout
+$navbar-height: 64px;
